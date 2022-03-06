@@ -2,7 +2,7 @@ import os
 
 from pymap3d.ellipsoid import Ellipsoid
 
-from spwx_coords.igrf_coeffs import load_coeffs
+from magcoordpy.igrf_coeffs import load_coeffs
 
 igrf_file = os.path.dirname(os.path.abspath(__file__)) + "/data/igrf13coeffs.txt"
 GH = load_coeffs(igrf_file)

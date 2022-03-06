@@ -4,9 +4,9 @@ from math import pi
 import numpy as np
 import pymap3d
 
-import spwx_coords.constants as CONSTS
-import spwx_coords.helpers as helpers
-import spwx_coords.igrf_coeffs as igrf_coeffs
+import magcoordpy.constants as CONSTS
+import magcoordpy.helpers as helpers
+import magcoordpy.igrf_coeffs as igrf_coeffs
 
 logger = logging.getLogger("spwx-coord")
 

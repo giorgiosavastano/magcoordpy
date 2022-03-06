@@ -783,10 +783,13 @@ python-versions = ">=3.7"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
+[extras]
+docs = []
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "69d2108064d6201aa95186c61ec0da6983eda7133592de7a55910796e9ddb07e"
+content-hash = "057de9af7bb82f01f21a4f8adb468e59dc70010e7740fc216b19bd75b675bf7f"
 
 [metadata.files]
 aiobotocore = [

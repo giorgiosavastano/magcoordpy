@@ -5,7 +5,7 @@ from unittest import TestCase
 import numpy as np
 import pytest
 
-from spwx_coords.coord_transforms import (
+from magcoordpy.coord_transforms import (
     cd2geodetic,
     compute_pos_centered_dipole_north_pole,
     ecef2eccdf,
