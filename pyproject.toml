@@ -6,7 +6,7 @@ authors = ["Giorgio Savastano <giorgio.savastano@uniroma1.it>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 numpy = "^1.22.2"
 pymap3d = "^2.7.2"
 urllib3 = "^1.26.8"

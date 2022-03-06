@@ -806,8 +806,8 @@ docs = []
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "ad99f0350b5ed1bd0966634c846f2a85814c39a46b081fae4e955de9723cf876"
+python-versions = "^3.8"
+content-hash = "b36052afd308f3e838f4c7894b8ea7a1a6f385dbf1a2066f83c51ce14a4f56bb"
 
 [metadata.files]
 aiobotocore = [
