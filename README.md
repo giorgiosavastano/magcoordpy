@@ -4,7 +4,7 @@
 ![coverage-main](https://img.shields.io/codecov/c/github/giorgiosavastano/magcoordpy)
 ![license](https://img.shields.io/github/license/giorgiosavastano/magcoordpy)
 
-A python package for working with EASE grids in geodetic coordinates.
+A python package for working with geomagnetic coordinates.
 The documentation is available at https://magcoordpy.readthedocs.io/en/latest/.
 
 Installation
@@ -16,6 +16,12 @@ Example usage
 -------------
 
     import magcoordpy as mcp
+    long_geo = np.arange(-180, 190, 10)
+    lati_geo = np.zeros(len(long_array))
+    alti_geo = np.zeros(len(long_array))
+    lat_cd, long_cd, r_cd = mcp.geodetic2cd(
+            lati_array, long_array, alti_array, year=2021.0
+        )
 
 
 Authors:
