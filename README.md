@@ -1,4 +1,4 @@
-# magcoordpy
+# MagCoordPy
 
 ![test-main](https://github.com/giorgiosavastano/magcoordpy/actions/workflows/python-test-main.yml/badge.svg)
 ![coverage-main](https://img.shields.io/codecov/c/github/giorgiosavastano/magcoordpy)
@@ -15,7 +15,7 @@ Installation
 Example usage
 -------------
 
-    import magcoordpy
+    import magcoordpy as mcp
 
 
 Authors:
