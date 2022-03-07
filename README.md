@@ -4,7 +4,7 @@
 ![coverage-main](https://img.shields.io/codecov/c/github/giorgiosavastano/magcoordpy)
 ![license](https://img.shields.io/github/license/giorgiosavastano/magcoordpy)
 
-A python package for working with geomagnetic coordinates.
+A python package for working with magnetic coordinate transformations.
 The documentation is available at https://magcoordpy.readthedocs.io/en/latest/.
 
 Installation
