@@ -11,7 +11,7 @@ import magcoordpy.igrf_coeffs as igrf_coeffs
 logger = logging.getLogger("spwx-coord")
 
 
-def geodetic2ecef_spwx(geod_lati_deg, geod_long_deg, geod_alti_m):
+def geodetic2ecef(geod_lati_deg, geod_long_deg, geod_alti_m):
     """
     Conversion from Geodetic (lat, lon, alt) to geocentric Cartesian (x, y, z) coordinates.
     Author: Giorgio Savastano (giorgio.savastano@spire.com)
