@@ -22,6 +22,11 @@ Example usage
     lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo,
     													year=2021.0)
 
+It includes the following functions (not exhaustive list):
+
+* geodetic2cd
+* cd2geodetic
+
 
 Authors:
 
