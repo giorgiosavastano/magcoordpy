@@ -10,7 +10,7 @@ from magcoordpy.coord_transforms import (
     compute_pos_centered_dipole_north_pole,
     ecef2eccdf,
     geodetic2cd,
-    geodetic2ecef_spwx,
+    geodetic2ecef,
     mlon2mlt,
 )
 
@@ -98,7 +98,7 @@ class TestCoords(TestCase):
 
     @pytest.mark.unit
     def test_ecef2eccdf(self):
-        x, y, z = geodetic2ecef_spwx(80, 10, 20)
+        x, y, z = geodetic2ecef(80, 10, 20)
 
         x_cd, y_cd, z_cd = ecef2eccdf([x], [y], [z])
         self.assertEqual(type(x_cd), np.ndarray)

@@ -12,12 +12,14 @@ Example usage
 
 .. code-block:: python
 
-   import magcoordpy as mcp
+   from magcoordpy import coord_transforms
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+.. automodule:: coord_transforms.geodetic2cd
+   :members:
 
 Indices and tables
 ==================
