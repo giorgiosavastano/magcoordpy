@@ -19,7 +19,8 @@ Example usage
    :caption: Contents:
 
 .. automodule:: coord_transforms.geodetic2cd
-   :members:
+
+.. automodule:: coord_transforms.cd2geodetic
 
 Indices and tables
 ==================
