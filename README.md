@@ -28,8 +28,12 @@ It includes the following functions (not exhaustive list):
 * cd2geodetic
 
 
-Authors:
+## Authors
 
 - Giorgio Savastano (<giorgiosavastano@gmail.com>)
 
 Please use github issues to make bug reports and request new functionality. Contributions are always welcome.
+
+## References
+
+Laundal, K.M., Richmond, A.D. Magnetic Coordinate Systems. Space Sci Rev 206, 27–59 (2017). https://doi.org/10.1007/s11214-016-0275-y

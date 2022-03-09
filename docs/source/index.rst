@@ -18,7 +18,6 @@ Example usage
    alti_geo = np.zeros(len(long_array))
    lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo, year=2021.0)
 
-
 coord_transforms.geodetic2cd
 ============================
 
