@@ -7,6 +7,15 @@ To install:
 
    pip install magcoordpy
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+coord_transforms.geodetic2cd
+============================
+
 Example usage
 -------------
 
@@ -19,13 +28,14 @@ Example usage
    lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo, year=2021.0)
 
 
-.. autoclass:: coord_transforms.geodetic2cd
+.. autofunction:: coord_transforms.geodetic2cd
    :members:
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+References
+==========
+
+Laundal, K.M., Richmond, A.D. Magnetic Coordinate Systems. Space Sci Rev 206, 27–59 (2017). <https://doi.org/10.1007/s11214-016-0275-y>
 
 
 Indices and tables
@@ -34,8 +44,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-References
-==========
-
-Laundal, K.M., Richmond, A.D. Magnetic Coordinate Systems. Space Sci Rev 206, 27–59 (2017). https://doi.org/10.1007/s11214-016-0275-y
