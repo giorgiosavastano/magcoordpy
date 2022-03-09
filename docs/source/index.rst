@@ -18,14 +18,15 @@ Example usage
    alti_geo = np.zeros(len(long_array))
    lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo, year=2021.0)
 
-coord_transforms.geodetic2cd
-============================
 
-.. automodule:: coord_transforms.geodetic2cd
+.. autoclass:: coord_transforms.geodetic2cd
+   :members:
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
 
 Indices and tables
 ==================
@@ -33,3 +34,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+References
+==========
+
+Laundal, K.M., Richmond, A.D. Magnetic Coordinate Systems. Space Sci Rev 206, 27–59 (2017). https://doi.org/10.1007/s11214-016-0275-y
