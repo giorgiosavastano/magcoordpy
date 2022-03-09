@@ -28,7 +28,7 @@ It includes the following functions (not exhaustive list):
 * cd2geodetic
 
 
-Authors:
+## Authors
 
 - Giorgio Savastano (<giorgiosavastano@gmail.com>)
 
