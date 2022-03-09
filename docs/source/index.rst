@@ -28,7 +28,7 @@ Example usage
    lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo, year=2021.0)
 
 
-.. autofunction:: coord_transforms.geodetic2cd
+.. automodule:: coord_transforms.geodetic2cd
    :members:
 
 
