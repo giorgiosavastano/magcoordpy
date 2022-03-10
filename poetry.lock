@@ -374,6 +374,21 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "numpydoc"
+version = "1.2"
+description = "Sphinx extension to support docstrings in Numpy format"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Jinja2 = ">=2.10"
+sphinx = ">=1.8"
+
+[package.extras]
+testing = ["pytest", "pytest-cov", "matplotlib"]
+
+[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
@@ -807,7 +822,7 @@ docs = []
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b36052afd308f3e838f4c7894b8ea7a1a6f385dbf1a2066f83c51ce14a4f56bb"
+content-hash = "88b9b6c7fceee955fb83563fd7ffa0c459c6ac14539a2e8ad6f5eb3da57716f1"
 
 [metadata.files]
 aiobotocore = [
@@ -1248,6 +1263,10 @@ numpy = [
     {file = "numpy-1.22.2-cp39-cp39-win_amd64.whl", hash = "sha256:59153979d60f5bfe9e4c00e401e24dfe0469ef8da6d68247439d3278f30a180f"},
     {file = "numpy-1.22.2-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4a176959b6e7e00b5a0d6f549a479f869829bfd8150282c590deee6d099bbb6e"},
     {file = "numpy-1.22.2.zip", hash = "sha256:076aee5a3763d41da6bef9565fdf3cb987606f567cd8b104aded2b38b7b47abf"},
+]
+numpydoc = [
+    {file = "numpydoc-1.2-py3-none-any.whl", hash = "sha256:3ecbb9feae080031714b63128912988ebdfd4c582a085d25b8d9f7ac23c2d9ef"},
+    {file = "numpydoc-1.2.tar.gz", hash = "sha256:0cec233740c6b125913005d16e8a9996e060528afcb8b7cad3f2706629dfd6f7"},
 ]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
