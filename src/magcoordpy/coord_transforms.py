@@ -251,8 +251,8 @@ def spherical2ecef(colat_geoc_arr, long_geoc_arr, radial_dist_geoc_arr):
 def geodetic2cd(
     gglat_deg_array, gglon_deg_array, ggalt_km_array, decimals=2, year=2021.0
 ):
-    """
-    Transformation from Geodetic (lat, lon, alt) to Centered Dipole (CD) (lat, lon, alt).
+    """Transformation from Geodetic to Centered Dipole (CD).
+
     Author: Giorgio Savastano (giorgio.savastano@spire.com)
 
     Parameters
@@ -263,11 +263,11 @@ def geodetic2cd(
         array containing geodetic latitude values in degrees
     ggalt_km_array : np.ndarray
         array containing geodetic altitude values in km
-    decimals : int, optional
-        Number of decimal places to round to (default: 2).  If
+    decimals : int, default=2
+        Number of decimal places to round to. If
         decimals is negative, it specifies the number of positions to
         the left of the decimal point.
-    year : float
+    year : float, default=2021.0
         year for computing the IGRF Gauss coefficients
 
     Returns
@@ -312,7 +312,7 @@ def eccdf2ecef(x_cd, y_cd, z_cd, year=2021.0):
         array containing y component of CD coordinates
     z_cd : np.ndarray
         array containing z component of CD coordinates
-    year : float
+    year : float, default=2021.0
         year for computing the IGRF Gaus coefficients
 
     Returns
@@ -371,26 +371,29 @@ def eccdf2ecef(x_cd, y_cd, z_cd, year=2021.0):
 
 
 def cd2geodetic(lat_cd_arr, lon_cd_arr, alt_cd_arr, decimals=3, year=2021.0):
-    """
-    Transformation from Centered Dipole (CD) lat, lon, alt to Geodetic lat, lon, alt.
+    """Transformation from Centered Dipole (CD) to Geodetic.
+
     Author: Giorgio Savastano (giorgio.savastano@spire.com)
 
-    Args:
-        lat_cd_arr: np.ndarray
-            array containing latitude component of CD coordinates in degrees
-        lon_cd_arr: np.ndarray
-            array containing longitude component of CD coordinates in degrees
-        alt_cd_arr: np.ndarray
-            array containing altitude (N.B. not the radial distance) component of CD coordinates in meters
-        decimals : int, optional
-            Number of decimal places to round to (default: 3).  If
-            decimals is negative, it specifies the number of positions to
-            the left of the decimal point
-        year: float
-            (default: 2021)
+    Parameters
+    ----------
+    lat_cd_arr : np.ndarray
+        array containing latitude component of CD coordinates in degrees
+    lon_cd_arr : np.ndarray
+        array containing longitude component of CD coordinates in degrees
+    alt_cd_arr : np.ndarray
+        array containing altitude (N.B. not the radial distance)
+        component of CD coordinates in meters
+    decimals : int, , default=3
+        Number of decimal places to round to. If
+        decimals is negative, it specifies the number of positions to
+        the left of the decimal point
+    year : float, default=2021.0
+        year for computing the IGRF Gauss coefficients
 
-    Returns:
-    tuple: tuple[np.ndarray, np.ndarray, np.ndarray]
+    Returns
+    -------
+    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
     """
     # convert lat to colat
     colat_cd_arr = 90 - lat_cd_arr

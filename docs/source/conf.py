@@ -42,7 +42,6 @@ extensions = [
 ]
 
 # Napoleon settings
-napoleon_google_docstring = True
 napoleon_numpy_docstring = True
 
 # Add any paths that contain templates here, relative to this directory.
