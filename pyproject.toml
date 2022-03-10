@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "magcoordpy"
-version = "0.1.8"
+version = "0.1.9"
 description = "A python package for working with magnetic coordinate transformations"
 authors = ["Giorgio Savastano <giorgio.savastano@uniroma1.it>"]
 license = "MIT"
@@ -20,6 +20,7 @@ sphinx-rtd-theme = "^1.0.0"
 zarr = "^2.11.0"
 s3fs = "^2022.2.0"
 pytest-cov = "^3.0.0"
+numpydoc = "^1.2"
 
 [tool.poetry.extras]
 docs = ['sphinx']
