@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "magcoordpy"
-version = "0.1.9"
+version = "0.1.10"
 description = "A python package for working with magnetic coordinate transformations"
 authors = ["Giorgio Savastano <giorgio.savastano@uniroma1.it>"]
 license = "MIT"
