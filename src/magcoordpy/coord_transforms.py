@@ -47,12 +47,15 @@ def compute_pos_centered_dipole_north_pole(year=2021.0):
     Coordinates of the CD northern pole are returned in Geocentric Spherical (colat, long) coordinates [rad].
     Author: Giorgio Savastano (giorgio.savastano@spire.com)
 
-    Args:
-        year: float
-        year for the computation
 
-    Returns:
-        tuple: tuple[float, float]
+    Parameters
+    ----------
+        year : float
+            year for the computation
+
+    Returns
+    -------
+        tuple : tuple[float, float]
     """
     g, h = igrf_coeffs.get_coeffs(CONSTS.GH, year)
 
