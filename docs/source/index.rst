@@ -12,7 +12,9 @@ To install:
    :maxdepth: 2
    :caption: Contents:
 
-:doc:`functions`
+   coord_transforms
+
+:doc:`coord_transforms`
 	Documentation for coord_transforms functions
 
 

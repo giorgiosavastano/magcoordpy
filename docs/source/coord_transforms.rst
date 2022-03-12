@@ -1,13 +1,17 @@
+coord_tranforms
+===============
+
 geodetic2cd
 -----------
 
 .. automodule:: coord_transforms.geodetic2cd
-	:members:
-
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 Example usage
--------------
+~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -16,3 +20,12 @@ Example usage
    lati_geo = np.zeros(len(long_array))
    alti_geo = np.zeros(len(long_array))
    lat_cd, lon_cd, r_cd = coord_transforms.geodetic2cd(lati_geo, long_geo, alti_geo, year=2021.0)
+
+
+cd2geodetic
+-----------
+
+.. automodule:: coord_transforms.cd2geodetic
+    :members:
+    :undoc-members:
+    :show-inheritance:
