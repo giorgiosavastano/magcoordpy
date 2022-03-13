@@ -12,10 +12,10 @@ To install:
    :maxdepth: 2
    :caption: Contents:
 
-   coord_transforms
+   ort_mag_coo_sys
 
-:doc:`coord_transforms`
-	Documentation for coord_transforms functions
+:doc:`ort_mag_coo_sys`
+	Documentation for orthogonal magnetic coordinate systems functions
 
 
 References

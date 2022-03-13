@@ -24,8 +24,8 @@ Example usage
 
 It includes the following functions (not exhaustive list):
 
-* geodetic2cd
-* cd2geodetic
+* geodetic2cd --> transformation from geodetic to centered dipole
+* cd2geodetic --> transformation from centered dipole to geodetic
 
 
 ## Authors

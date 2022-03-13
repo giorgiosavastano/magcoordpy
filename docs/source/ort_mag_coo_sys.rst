@@ -1,5 +1,5 @@
-coord_tranforms
-===============
+Orthogonal Magnetic Coordinate Systems
+======================================
 
 geodetic2cd
 -----------
