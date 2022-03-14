@@ -11,8 +11,8 @@ sphinx:
 python:
   version: 3.8
   install:
+    - requirements: docs/requirements.txt
     - method: pip # You will need this for autodoc to work
       path: .
       extra_requirements:
         - docs
-        - docs/requirements.txt
