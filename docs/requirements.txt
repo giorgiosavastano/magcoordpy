@@ -1,5 +1,0 @@
-autodocsumm  # autodoc and autosummary
-docstr-coverage  # docstring coverage test
-myst_parser  # include markdown text
-nbsphinx  # include jupyter notebook
-pandoc  # include jupyter notebook
