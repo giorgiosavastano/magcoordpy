@@ -12,9 +12,9 @@ logger = logging.getLogger("spwx-coord")
 
 
 def geodetic2ecef(geod_lati_deg, geod_long_deg, geod_alti_m):
-    """
-    Conversion from Geodetic (lat, lon, alt) to geocentric Cartesian (x, y, z) coordinates.
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    """Conversion from Geodetic (lat, lon, alt) to geocentric Cartesian (x, y, z) coordinates.
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -27,7 +27,7 @@ def geodetic2ecef(geod_lati_deg, geod_long_deg, geod_alti_m):
 
     Returns
     -------
-    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
+    tuple[np.ndarray, np.ndarray, np.ndarray]
     """
     geod_long = np.deg2rad(geod_long_deg)
     geod_lati = np.deg2rad(geod_lati_deg)
@@ -45,17 +45,18 @@ def compute_pos_centered_dipole_north_pole(year=2021.0):
     """
     Function that returns the position of the centered dipole (CD) northern pole using first three Gauss coefficients.
     Coordinates of the CD northern pole are returned in Geocentric Spherical (colat, long) coordinates [rad].
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
 
     Parameters
     ----------
-        year : float
-            year for the computation
+    year : float, default=2021.0
+        year for the computation
 
     Returns
     -------
-        tuple : tuple[float, float]
+    tuple[float, float]
     """
     g, h = igrf_coeffs.get_coeffs(CONSTS.GH, year)
 
@@ -87,9 +88,9 @@ def compute_pos_centered_dipole_north_pole(year=2021.0):
 
 
 def mlon2mlt(mlon_cd, datetime, ssheight=50 * 6371):
-    """
-    Computes the magnetic local time at the specified magnetic longitude and UT.
-    Author: Giorgio Savastano (giorgio.savastano@spire.com) adapted from apexpy.
+    """Computes the magnetic local time at the specified magnetic longitude and UT.
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com) adapted from apexpy.
 
     Parameters
     ----------
@@ -104,7 +105,7 @@ def mlon2mlt(mlon_cd, datetime, ssheight=50 * 6371):
         prevents the South-Atlantic Anomaly (SAA) from influencing the MLT.
     Returns
     -------
-    mlt : ndarray or float
+    ndarray or float
         Magnetic local time [0, 24)
     Notes
     -----
@@ -123,9 +124,9 @@ def mlon2mlt(mlon_cd, datetime, ssheight=50 * 6371):
 
 
 def ecef2eccdf(x_geoc, y_geoc, z_geoc, year=2021.0):
-    """
-    Transformation from Geocentric Cartesian (x, y, z) to Centered Dipole (CD) Cartesian (x, y, z) coordinates.
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    """Transformation from Geocentric Cartesian (x, y, z) to Centered Dipole (CD) Cartesian (x, y, z) coordinates.
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -135,7 +136,7 @@ def ecef2eccdf(x_geoc, y_geoc, z_geoc, year=2021.0):
         array containing y coordinates
     z_geoc : np.ndarray
         array containing z coordinates
-    year : float
+    year : float, default=2021.0
         year for computing the IGRF Gaus coefficients
 
     Returns
@@ -194,9 +195,9 @@ def ecef2eccdf(x_geoc, y_geoc, z_geoc, year=2021.0):
 
 
 def ecef2spherical(x, y, z, decimals=2):
-    """
-    Transformation from geocentric Cartesian (x, y, z) to Spherical (colat, long, r) coordinates.
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    """Transformation from geocentric Cartesian (x, y, z) to Spherical (colat, long, r) coordinates.
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -206,14 +207,14 @@ def ecef2spherical(x, y, z, decimals=2):
         array containing y coordinates
     z : np.ndarray
         array containing z coordinates
-    decimals : int, optional
-            Number of decimal places to round to (default: 2).  If
+    decimals : int, default=2
+            Number of decimal places to round to.  If
             decimals is negative, it specifies the number of positions to
             the left of the decimal point
 
     Returns
     -------
-    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
+    tuple[np.ndarray, np.ndarray, np.ndarray]
     """
     # geocentric radial distance 𝑟
     r = np.sqrt(x * x + y * y + z * z)
@@ -226,19 +227,21 @@ def ecef2spherical(x, y, z, decimals=2):
 
 
 def spherical2ecef(colat_geoc_arr, long_geoc_arr, radial_dist_geoc_arr):
-    """
-    Transformation from Geocentric (GEO) Spherical (colat, lon, r) to Cartesian (x,y,z).
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    """Transformation from Geocentric (GEO) Spherical (colat, lon, r) to Cartesian (x,y,z).
 
-    Args:
-        colat_geoc_arr: np.ndarray
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
+
+    Parameters
+    ----------
+    colat_geoc_arr : np.ndarray
         array containing colatitude component of Geocentric coordinates in rad
-        long_geoc_arr:
+    long_geoc_arr : np.ndarray
         array containing longitude component of Geocentric coordinates in rad
-        radial_dist_geoc_arr:
+    radial_dist_geoc_arr : np.ndarray
         array containing radial distance component of Geocentric coordinates in m
 
-    Returns:
+    Returns
+    -------
 
     """
     x_geoc_arr = radial_dist_geoc_arr * np.sin(colat_geoc_arr) * np.cos(long_geoc_arr)
@@ -251,9 +254,9 @@ def spherical2ecef(colat_geoc_arr, long_geoc_arr, radial_dist_geoc_arr):
 def geodetic2cd(
     gglat_deg_array, gglon_deg_array, ggalt_km_array, decimals=2, year=2021.0
 ):
-    """Transformation from Geodetic to Centered Dipole (CD).
+    """Transformation from Geodetic (lat, lon, alt) to Centered Dipole (CD) (lat, lon, alt).
 
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -272,7 +275,7 @@ def geodetic2cd(
 
     Returns
     -------
-    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
+    tuple[np.ndarray, np.ndarray, np.ndarray]
         CD lat, lon, alt arrays
     """
     if type(gglon_deg_array) == list:
@@ -300,9 +303,9 @@ def geodetic2cd(
 
 
 def eccdf2ecef(x_cd, y_cd, z_cd, year=2021.0):
-    """
-    Transformation from Centered Dipole (CD) Cartesian (x, y, z) to Geocentric Cartesian (x, y, z) coordinates.
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    """Transformation from Centered Dipole (CD) Cartesian (x, y, z) to Geocentric Cartesian (x, y, z) coordinates.
+
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -317,7 +320,7 @@ def eccdf2ecef(x_cd, y_cd, z_cd, year=2021.0):
 
     Returns
     -------
-    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
+    tuple[np.ndarray, np.ndarray, np.ndarray]
     """
     if type(x_cd) == list:
         logger.info(" Converting list to np.ndarrays.")
@@ -371,9 +374,9 @@ def eccdf2ecef(x_cd, y_cd, z_cd, year=2021.0):
 
 
 def cd2geodetic(lat_cd_arr, lon_cd_arr, alt_cd_arr, decimals=3, year=2021.0):
-    """Transformation from Centered Dipole (CD) to Geodetic.
+    """Transformation from Centered Dipole (CD) (lat, lon, alt) to Geodetic (lat, lon, alt).
 
-    Author: Giorgio Savastano (giorgio.savastano@spire.com)
+    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
@@ -384,7 +387,7 @@ def cd2geodetic(lat_cd_arr, lon_cd_arr, alt_cd_arr, decimals=3, year=2021.0):
     alt_cd_arr : np.ndarray
         array containing altitude (N.B. not the radial distance)
         component of CD coordinates in meters
-    decimals : int, , default=3
+    decimals : int, default=3
         Number of decimal places to round to. If
         decimals is negative, it specifies the number of positions to
         the left of the decimal point
@@ -393,7 +396,7 @@ def cd2geodetic(lat_cd_arr, lon_cd_arr, alt_cd_arr, decimals=3, year=2021.0):
 
     Returns
     -------
-    tuple : tuple[np.ndarray, np.ndarray, np.ndarray]
+    tuple[np.ndarray, np.ndarray, np.ndarray]
     """
     # convert lat to colat
     colat_cd_arr = 90 - lat_cd_arr

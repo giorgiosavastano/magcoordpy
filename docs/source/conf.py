@@ -17,6 +17,7 @@ from typing import List
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("../.."))
+sys.path.insert(0, os.path.abspath("../../src"))
 sys.path.insert(0, os.path.abspath("../../src/magcoordpy"))
 
 
@@ -39,10 +40,16 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx_rtd_theme",
+    "autodocsumm",
+    "nbsphinx",
+    "myst_parser",
+    "sphinx.ext.coverage",
 ]
 
 # Napoleon settings
 napoleon_numpy_docstring = True
+
+autodoc_default_options = {"autosummary": True}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]

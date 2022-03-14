@@ -1,27 +1,15 @@
 Welcome to MagCoordPy's documentation!
 ======================================
 
-To install:
-
-.. code-block:: console
-
-   pip install magcoordpy
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   coord_transforms
+:doc:`ort_mag_coo_sys`
+	Documentation for orthogonal magnetic coordinate systems functions
 
-:doc:`coord_transforms`
-	Documentation for coord_transforms functions
-
-
-References
-==========
-
-Laundal, K.M., Richmond, A.D. Magnetic Coordinate Systems. Space Sci Rev 206, 27–59 (2017). <https://doi.org/10.1007/s11214-016-0275-y>
+.. include:: ../../README.md
+   :parser: myst_parser.sphinx_
 
 
 Indices and tables
