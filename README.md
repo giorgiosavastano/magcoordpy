@@ -3,6 +3,7 @@
 ![test-main](https://github.com/giorgiosavastano/magcoordpy/actions/workflows/python-test-main.yml/badge.svg)
 ![coverage-main](https://img.shields.io/codecov/c/github/giorgiosavastano/magcoordpy)
 ![license](https://img.shields.io/github/license/giorgiosavastano/magcoordpy)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/magcoordpy)
 
 A python package for working with magnetic coordinate transformations.
 The documentation is available at <https://magcoordpy.readthedocs.io/en/latest/>.
